@@ -6,276 +6,6 @@
     <title>Club 77 | The Ultimate Nightlife Experience</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <style>
-        /* General styles */
-        body {
-            font-family: 'Dancing Script', cursive; /* Handwritten style font */
-            background-color: #2e1a47; /* Dark purple background */
-            color: white;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(to right, #9b4d96, #6a1b9a); /* Purple gradient */
-            padding: 20px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-            position: relative;
-        }
-
-        h1 {
-            font-size: 56px;
-            font-weight: bold;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-        }
-
-        /* Navigation */
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #0096c7; /* Soft blue hover effect */
-        }
-
-        /* Logo in the top-right corner */
-        .logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 120px;
-            height: auto;
-        }
-
-        /* Hero section */
-        .hero {
-            padding: 80px 20px;
-            background: url('images/club_main.jpg') no-repeat center center/cover;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-            position: relative;
-            color: white;
-        }
-
-        .hero h2 {
-            font-size: 50px;
-            font-weight: bold;
-            margin: 10px 0;
-            letter-spacing: 3px;
-            text-align: center;
-            text-transform: uppercase;
-            line-height: 1.4;
-            color: #0096c7; /* Soft blue color */
-        }
-
-        .hero p {
-            font-size: 24px;
-            font-weight: 300;
-            letter-spacing: 1px;
-            margin: 10px 0;
-            text-align: center;
-        }
-
-        /* Pricing section */
-        #pricing {
-            background-color: #3d1c61;
-            padding: 50px 20px;
-        }
-
-        #pricing h2 {
-            font-size: 36px;
-            color: #0096c7; /* Soft blue color */
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-        }
-
-        .pricing-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .pricing-card {
-            background-color: #2e1a47;
-            padding: 20px;
-            border-radius: 15px;
-            width: 250px;
-            text-align: center;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .pricing-card:hover {
-            transform: scale(1.05);
-        }
-
-        .pricing-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .pricing-card p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        /* Modal (Pop-up) for more info */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-            text-align: left;
-        }
-
-        .modal-content {
-            background-color: #2e1a47;
-            margin: 10% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 50%;
-            border-radius: 10px;
-            color: white;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #0096c7;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-content ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .modal-content ul li {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        /* Gallery section */
-        #gallery {
-            padding: 50px 20px;
-        }
-
-        #gallery h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #0096c7; /* Soft blue color */
-            text-transform: uppercase;
-        }
-
-        .image-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .image-grid img {
-            width: 30%;
-            border-radius: 10px;
-            border: 5px solid #fff;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-        }
-
-        /* Contact section */
-        #contact {
-            background-color: #2e1a47;
-            padding: 50px 20px;
-        }
-
-        #contact h2 {
-            font-size: 36px;
-            color: #0096c7;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            font-size: 20px;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .contact-info a {
-            color: #0096c7;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(to right, #9b4d96, #6a1b9a);
-            padding: 20px;
-            font-weight: bold;
-            color: white;
-        }
-
-        /* History Section */
-        #history {
-            background-color: #3d1c61;
-            padding: 50px 20px;
-        }
-
-        #history h2 {
-            font-size: 36px;
-            color: #0096c7;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        #history p {
-            font-size: 20px;
-            color: white;
-            line-height: 1.8;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -291,17 +21,17 @@
             </ul>
         </nav>
     </header>
-    
+
     <section id="home" class="hero">
         <h2>The Ultimate Nightlife Experience</h2>
         <p>Step into the world of luxury, music, and unforgettable moments. Get ready to indulge in an experience like no other, where the night comes alive with elegance, rhythm, and endless possibilities.</p>
     </section>
-    
+
     <section id="history">
         <h2>History</h2>
         <p>Klub 77 byl založen v roce 2003 jako exkluzivní místo pro setkávání lidí z celého světa, kteří hledali nejen zábavu, ale i luxusní zážitky. V roce 2010 prošel velkou rekonstrukcí, která ho přetvořila na jeden z nejlepších nočních klubů v oblasti. Od svého vzniku si Klub 77 drží pověst místa, kde se rodí nezapomenutelné okamžiky, s vrcholnými DJ sety, hvězdnými hosty a atmosférou, která nikdy nezklame.</p>
     </section>
-    
+
     <section id="pricing">
         <h2>Pricing</h2>
         <div class="pricing-container">
@@ -319,17 +49,16 @@
             </div>
         </div>
     </section>
-    
-<section id="gallery">
-    <h2>Gallery</h2>
-    <p>Take a glimpse into the electrifying atmosphere of Club 77.</p>
-    <div class="image-grid">
-        <img src="https://github.com/Nevimas/club77/blob/main/club_interior.jpg?raw=true" alt="Club interior">
-        <img src="https://github.com/Nevimas/club77/blob/main/dj_performance.jpg?raw=true" alt="DJ Booth">
-        <img src="https://github.com/Nevimas/club77/blob/main/club_crowd.jpg?raw=true" alt="Club Bar">
-    </div>
-</section>
 
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Take a glimpse into the electrifying atmosphere of Club 77.</p>
+        <div class="image-grid">
+            <img src="https://github.com/Nevimas/club77/blob/main/club_interior.jpg?raw=true" alt="Club interior">
+            <img src="https://github.com/Nevimas/club77/blob/main/dj_performance.jpg?raw=true" alt="DJ Booth">
+            <img src="https://github.com/Nevimas/club77/blob/main/club_crowd.jpg?raw=true" alt="Club Bar">
+        </div>
+    </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
@@ -358,39 +87,5 @@
         <p>&copy; 2025 Club 77. All rights reserved.</p>
     </footer>
 
-    <script>
-        function showModal(type) {
-            document.getElementById("myModal").style.display = "block";
-            let title = document.getElementById("modalTitle");
-            let content = document.getElementById("modalContent");
-            if(type === 'VIP') {
-                title.textContent = "VIP";
-                content.innerHTML = `
-                    <li>Exclusive VIP access to all areas</li>
-                    <li>Free drinks and cocktails</li>
-                    <li>Private table service</li>
-                    <li>Meet and greet with top DJs</li>
-                `;
-            } else if(type === 'Standard') {
-                title.textContent = "Standard";
-                content.innerHTML = `
-                    <li>Access to main floor</li>
-                    <li>Standard drink options</li>
-                    <li>Regular seating</li>
-                `;
-            } else {
-                title.textContent = "Special";
-                content.innerHTML = `
-                    <li>Priority access</li>
-                    <li>Free drinks</li>
-                    <li>Meet with select DJs</li>
-                `;
-            }
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-    </script>
 </body>
 </html>
