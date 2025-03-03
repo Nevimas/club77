@@ -357,47 +357,59 @@
         <p>&copy; 2025 Club 77. All rights reserved.</p>
     </footer>
 
-    <script>
-        function showModal(type) {
-            document.getElementById("myModal").style.display = "block";
-            let title = document.getElementById("modal-title");
-            let content = document.getElementById("modal-description");
-            if(type === 'VIP') {
-                title.textContent = "VIP";
-                content.innerHTML = `
-                    <li>Exclusive VIP access to all areas</li>
-                    <li>Free drinks and cocktails</li>
-                    <li>Private table service</li>
-                    <li>Meet and greet with top DJs</li>
-                `;
-            } else if(type === 'Standard') {
-                title.textContent = "Standard";
-                content.innerHTML = `
-                    <li>Access to main floor</li>
-                    <li>Standard drink options</li>
-                    <li>Regular seating</li>
-                `;
-            } else if(type === 'Special') {
-                title.textContent = "Special";
-                content.innerHTML = `
-                    <li>Priority access</li>
-                    <li>Free drinks</li>
-                    <li>Meet with select DJs</li>
-                `;
-            } else if(type === 'VIP Entry') {
-                title.textContent = "VIP Entry";
-                content.innerHTML = `
-                    <li>Exclusive entry with no wait time</li>
-                    <li>Access to VIP areas</li>
-                    <li>Priority seating</li>
-                    <li>Welcome drink</li>
-                `;
-            }
+<script>
+    // Funkce pro zobrazení modálního okna na základě typu
+    function showModal(type) {
+        document.getElementById("myModal").style.display = "block";
+        let title = document.getElementById("modal-title");
+        let content = document.getElementById("modal-description");
+        
+        // Zkontrolujeme, jaký typ modalitu otevřít a zobrazit detaily
+        if(type === 'VIP') {
+            title.textContent = "VIP";
+            content.innerHTML = `
+                <li>Exclusive VIP access to all areas</li>
+                <li>Free drinks and cocktails</li>
+                <li>Private table service</li>
+                <li>Meet and greet with top DJs</li>
+            `;
+        } else if(type === 'Standard') {
+            title.textContent = "Standard";
+            content.innerHTML = `
+                <li>Access to main floor</li>
+                <li>Standard drink options</li>
+                <li>Regular seating</li>
+            `;
+        } else if(type === 'Special') {
+            title.textContent = "Special";
+            content.innerHTML = `
+                <li>Priority access</li>
+                <li>Free drinks</li>
+                <li>Meet with select DJs</li>
+            `;
+        } else if(type === 'VIP Entry') {
+            title.textContent = "VIP Entry";
+            content.innerHTML = `
+                <li>Exclusive entry with no wait time</li>
+                <li>Access to VIP areas</li>
+                <li>Priority seating</li>
+                <li>Welcome drink</li>
+            `;
         }
+    }
 
-        function closeModal() {
+    // Funkce pro zavření modálního okna
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    // Funkce pro zavření modálního okna při kliknutí mimo obsah okna
+    window.onclick = function(event) {
+        if (event.target === document.getElementById("myModal")) {
             document.getElementById("myModal").style.display = "none";
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
