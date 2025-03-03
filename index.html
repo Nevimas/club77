@@ -55,7 +55,7 @@
         }
 
         nav ul li a:hover {
-            color: #ff6f00; /* Soft gold hover effect */
+            color: #0096c7; /* Soft blue hover effect */
         }
 
         /* Logo in the top-right corner */
@@ -96,6 +96,7 @@
             font-weight: 300;
             letter-spacing: 1px;
             margin: 10px 0;
+            text-align: center;
         }
 
         /* Pricing section */
@@ -106,7 +107,7 @@
 
         #pricing h2 {
             font-size: 36px;
-            color: #ffad06; /* Warm gold color */
+            color: #0096c7; /* Soft blue color */
             text-transform: uppercase;
             margin-bottom: 30px;
             letter-spacing: 2px;
@@ -127,6 +128,7 @@
             text-align: center;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
+            cursor: pointer;
         }
 
         .pricing-card:hover {
@@ -151,7 +153,7 @@
         #gallery h2 {
             font-size: 36px;
             margin-bottom: 20px;
-            color: #ffad06;
+            color: #0096c7; /* Soft blue color */
             text-transform: uppercase;
         }
 
@@ -177,7 +179,7 @@
 
         #contact h2 {
             font-size: 36px;
-            color: #ffad06;
+            color: #0096c7;
             text-transform: uppercase;
             margin-bottom: 20px;
         }
@@ -189,7 +191,7 @@
         }
 
         .contact-info a {
-            color: #ffad06;
+            color: #0096c7;
             text-decoration: none;
         }
 
@@ -204,6 +206,25 @@
             font-weight: bold;
             color: white;
         }
+
+        /* History Section */
+        #history {
+            background-color: #3d1c61;
+            padding: 50px 20px;
+        }
+
+        #history h2 {
+            font-size: 36px;
+            color: #0096c7;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        #history p {
+            font-size: 20px;
+            color: white;
+            line-height: 1.8;
+        }
     </style>
 </head>
 <body>
@@ -216,32 +237,32 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://discord.gg/gmJuA5ZPuk" target="_blank">Join Us</a></li>
+                <li><a href="#history">History</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="home" class="hero">
         <h2>The Ultimate Nightlife Experience</h2>
-        <p>Step into the world of luxury, music, and unforgettable moments. Get ready to indulge in an experience like no other.</p>
+        <p>Step into the world of luxury, music, and unforgettable moments. Get ready to indulge in an experience like no other, where the night comes alive with elegance, rhythm, and endless possibilities.</p>
     </section>
     
     <section id="pricing">
         <h2>Pricing</h2>
         <div class="pricing-container">
-            <div class="pricing-card">
+            <div class="pricing-card" onclick="alert('Standard Entry: Access to the club. Enjoy a night of music and fun!')">
                 <h3>Standard Entry</h3>
                 <p>$500</p>
             </div>
-            <div class="pricing-card">
+            <div class="pricing-card" onclick="alert('VIP Entry: Premium access, exclusive services, and priority entry!')">
                 <h3>VIP Entry</h3>
                 <p>$5,000</p>
             </div>
-            <div class="pricing-card">
+            <div class="pricing-card" onclick="alert('Private Booth: Private booth with bottle service, perfect for a luxurious night!')">
                 <h3>Private Booth</h3>
                 <p>$10,000</p>
             </div>
-            <div class="pricing-card">
+            <div class="pricing-card" onclick="alert('Premium Service: Full VIP experience with personal service and extra perks!')">
                 <h3>Premium Service</h3>
                 <p>$50,000</p>
             </div>
@@ -252,25 +273,25 @@
         <h2>Gallery</h2>
         <div class="image-grid">
             <img src="https://github.com/Nevimas/club77/blob/main/club_interior.jpg?raw=true" alt="Club interior">
-            <img src="https://github.com/Nevimas/club77/blob/main/dj_performance.jpg?raw=true" alt="DJ Booth">
-            <img src="https://github.com/Nevimas/club77/blob/main/club_crowd.jpg?raw=true" alt="Club Bar">
+            <img src="https://github.com/Nevimas/club77/blob/main/dj_performance.jpg?raw=true" alt="DJ Performance">
+            <img src="https://github.com/Nevimas/club77/blob/main/vip_area.jpg?raw=true" alt="VIP Area">
         </div>
     </section>
-
+    
     <section id="contact">
         <h2>Contact Us</h2>
         <div class="contact-info">
             <p>Email: <a href="mailto:contact@club77.com">contact@club77.com</a></p>
-            <p>Phone: <a href="tel:+123456789">+123 456 789</a></p>
-            <p>Location: Club 77, 77 Nightlife Ave, City, Country</p>
-            <p>Follow us on:
-                <a href="https://www.instagram.com/club77" target="_blank">Instagram</a> |
-                <a href="https://twitter.com/club77" target="_blank">Twitter</a> |
-                <a href="https://www.facebook.com/club77" target="_blank">Facebook</a>
-            </p>
+            <p>Phone: +(205) 265-9092</p>
+            <p>Location: 10079 Voodoo Place, Los Santos, SA</p>
         </div>
     </section>
-    
+
+    <section id="history">
+        <h2>History</h2>
+        <p>Klub 77 byl založen v roce 2003 jako exkluzivní místo pro setkávání lidí z celého světa, kteří hledali nejen zábavu, ale i luxusní zážitky. V průběhu let prošel několika modernizacemi, rozšířením nabídky a zajištění špičkových služeb. V roce 2010 prošel velkou rekonstrukcí, která ho přetvořila na jeden z nejlepších nočních klubů v oblasti. Od svého vzniku si Klub 77 drží pověst místa, kde se rodí nezapomenutelné okamžiky, s vrcholnými DJ sety, hvězdnými hosty a atmosférou, která nikdy nezklame.</p>
+    </section>
+
     <footer>
         <p>&copy; 2025 Club 77. All rights reserved.</p>
     </footer>
