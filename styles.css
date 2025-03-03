@@ -1,6 +1,6 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #121212;
+    font-family: 'Dancing Script', cursive; /* Handwritten style font */
+    background-color: #2e1a47; /* Dark purple background */
     color: white;
     margin: 0;
     padding: 0;
@@ -8,20 +8,25 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #ff6a00, #ffad00);
-    padding: 40px 20px;
-    color: white;
-    font-size: 36px;
+    background: linear-gradient(to right, #9b4d96, #6a1b9a); /* Purple gradient */
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+h1 {
+    font-size: 56px;
     font-weight: bold;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 10px;
 }
 
 nav ul li {
@@ -30,92 +35,206 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffad00;
+    color: #0096c7; /* Soft blue hover effect */
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: auto;
 }
 
 .hero {
     padding: 80px 20px;
-    background: url('https://github.com/Nevimas/club77/blob/main/club_main.jpg?raw=true') no-repeat center center/cover;
+    background: url('images/club_main.jpg') no-repeat center center/cover;
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    position: relative;
     color: white;
-    font-size: 40px;
-    font-weight: bold;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
 }
 
-h2 {
-    font-size: 36px;
+.hero h2 {
+    font-size: 50px;
     font-weight: bold;
-    color: #ff6a00;
+    margin: 10px 0;
+    letter-spacing: 3px;
+    text-align: center;
     text-transform: uppercase;
-    margin-top: 50px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    line-height: 1.4;
+    color: #0096c7; /* Soft blue color */
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#pricing {
+    background-color: #3d1c61;
+    padding: 50px 20px;
+}
+
+#pricing h2 {
+    font-size: 36px;
+    color: #0096c7; /* Soft blue color */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
 }
 
 .pricing-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
-.pricing-item {
-    background-color: rgba(255, 255, 255, 0.1);
+.pricing-card {
+    background-color: #2e1a47;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    width: 220px;
+    width: 250px;
     text-align: center;
-    transition: 0.3s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    cursor: pointer;
 }
 
-.pricing-item h3 {
-    color: #ffad00;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.pricing-item p {
-    color: #fff;
-    font-size: 22px;
-}
-
-.pricing-item:hover {
+.pricing-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#gallery {
+    padding: 50px 20px;
+}
+
+#gallery h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0096c7;
+    text-transform: uppercase;
 }
 
 .image-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
-    margin-top: 30px;
 }
 
 .image-grid img {
     width: 30%;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+#contact {
+    background-color: #2e1a47;
+    padding: 50px 20px;
+}
+
+#contact h2 {
+    font-size: 36px;
+    color: #0096c7;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #0096c7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 footer {
-    background: linear-gradient(to right, #ff6a00, #ffad00);
+    background: linear-gradient(to right, #9b4d96, #6a1b9a);
     padding: 20px;
-    margin-top: 50px;
     font-weight: bold;
     color: white;
+}
+
+/* Modal (Pop-up) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+    text-align: left;
+}
+
+.modal-content {
+    background-color: #2e1a47;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #0096c7;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.modal-content ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
