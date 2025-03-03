@@ -22,14 +22,15 @@
             background: linear-gradient(to right, #9b4d96, #6a1b9a); /* Purple gradient */
             padding: 20px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: bold;
             color: white;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
         }
 
@@ -54,7 +55,16 @@
         }
 
         nav ul li a:hover {
-            color: #ffad06; /* Hover effect */
+            color: #ff6f00; /* Soft gold hover effect */
+        }
+
+        /* Logo in the top-right corner */
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            height: auto;
         }
 
         /* Hero section */
@@ -68,21 +78,24 @@
             align-items: center;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
             position: relative;
+            color: white;
         }
 
         .hero h2 {
-            font-size: 40px;
+            font-size: 50px;
             font-weight: bold;
             margin: 10px 0;
             letter-spacing: 3px;
             text-align: center;
+            text-transform: uppercase;
+            line-height: 1.4;
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 300;
             letter-spacing: 1px;
-            margin: 0;
+            margin: 10px 0;
         }
 
         /* Pricing section */
@@ -93,7 +106,7 @@
 
         #pricing h2 {
             font-size: 36px;
-            color: #ffad06;
+            color: #ffad06; /* Warm gold color */
             text-transform: uppercase;
             margin-bottom: 30px;
             letter-spacing: 2px;
@@ -172,6 +185,7 @@
         .contact-info {
             font-size: 20px;
             color: white;
+            margin-bottom: 20px;
         }
 
         .contact-info a {
@@ -194,6 +208,7 @@
 </head>
 <body>
     <header>
+        <img src="https://github.com/Nevimas/club77/blob/main/cropped_image.png?raw=true" alt="Club 77 Logo" class="logo">
         <h1>Club 77</h1>
         <nav>
             <ul>
@@ -208,7 +223,7 @@
     
     <section id="home" class="hero">
         <h2>The Ultimate Nightlife Experience</h2>
-        <p>Step into the world of luxury, music, and unforgettable moments.</p>
+        <p>Step into the world of luxury, music, and unforgettable moments. Get ready to indulge in an experience like no other.</p>
     </section>
     
     <section id="pricing">
@@ -248,6 +263,11 @@
             <p>Email: <a href="mailto:contact@club77.com">contact@club77.com</a></p>
             <p>Phone: <a href="tel:+123456789">+123 456 789</a></p>
             <p>Location: Club 77, 77 Nightlife Ave, City, Country</p>
+            <p>Follow us on:
+                <a href="https://www.instagram.com/club77" target="_blank">Instagram</a> |
+                <a href="https://twitter.com/club77" target="_blank">Twitter</a> |
+                <a href="https://www.facebook.com/club77" target="_blank">Facebook</a>
+            </p>
         </div>
     </section>
     
