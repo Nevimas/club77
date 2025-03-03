@@ -288,4 +288,76 @@
     
     <section id="history">
         <h2>History</h2>
-        <p>Club 77 byl založen v roce 2003 jako exkluzivní místo pro setkávání lidí z celého světa, kteří hledali nejen zábavu, ale i luxusní zážitky. V průběhu let prošel několika modernizacemi, rozšířením nabídky a zajištění špičkových služeb.
+        <p>Klub 77 byl založen v roce 2003 jako exkluzivní místo pro setkávání lidí z celého světa, kteří hledali nejen zábavu, ale i luxusní zážitky. V průběhu let prošel několika modernizacemi, rozšířením nabídky a zajištění špičkových služeb. V roce 2010 prošel velkou rekonstrukcí, která ho přetvořila na jeden z nejlepších nočních klubů v oblasti. Od svého vzniku si Klub 77 drží pověst místa, kde se rodí nezapomenutelné okamžiky, s vrcholnými DJ sety, hvězdnými hosty a atmosférou, která nikdy nezklame.</p>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-container">
+            <div class="pricing-card" onclick="showModal('VIP')">
+                <h3>VIP</h3>
+                <p>$500</p>
+            </div>
+            <div class="pricing-card" onclick="showModal('Standard')">
+                <h3>Standard</h3>
+                <p>$100</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:contact@club77.com">contact@club77.com</a></p>
+            <p>Phone: +(205) 265-9092</p>
+            <p>Location: 10079 Voodoo Place, Los Santos, SA</p>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">VIP</h3>
+            <ul id="modalContent">
+                <li>Exclusive VIP access to all areas</li>
+                <li>Free drinks and cocktails</li>
+                <li>Private table service</li>
+                <li>Meet and greet with top DJs</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Club 77. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    function showModal(type) {
+        document.getElementById("myModal").style.display = "block";
+        let title = document.getElementById("modalTitle");
+        let content = document.getElementById("modalContent");
+        if(type === 'VIP') {
+            title.textContent = "VIP";
+            content.innerHTML = `
+                <li>Exclusive VIP access to all areas</li>
+                <li>Free drinks and cocktails</li>
+                <li>Private table service</li>
+                <li>Meet and greet with top DJs</li>
+            `;
+        } else {
+            title.textContent = "Standard";
+            content.innerHTML = `
+                <li>Access to main floor</li>
+                <li>Standard drink options</li>
+                <li>Regular seating</li>
+            `;
+        }
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
