@@ -1,131 +1,215 @@
-body {
-    font-family: 'Lora', serif;
-    background-color: #121212;
-    color: white;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club 77 | The Ultimate Nightlife Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Dancing Script', cursive; /* Handwritten style font */
+            background-color: #2e1a47; /* Dark purple background */
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-header {
-    background: linear-gradient(to right, #ff6a00, #ffad00);
-    padding: 60px 20px;
-    color: white;
-    font-size: 42px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
-    font-family: 'Playfair Display', serif;
-}
+        /* Header */
+        header {
+            background: linear-gradient(to right, #9b4d96, #6a1b9a); /* Purple gradient */
+            padding: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+        }
 
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
-    transition: 0.3s;
-    letter-spacing: 1px;
-}
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
 
-nav ul li a:hover {
-    color: #ffad00;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
 
-.hero {
-    padding: 100px 20px;
-    background: url('https://github.com/Nevimas/club77/blob/main/club_main.jpg?raw=true') no-repeat center center/cover;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
-    font-family: 'Playfair Display', serif;
-}
+        nav ul li a:hover {
+            color: #ffad06; /* Hover effect */
+        }
 
-h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #ff6a00;
-    text-transform: uppercase;
-    margin-top: 50px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-    letter-spacing: 2px;
-}
+        /* Hero section */
+        .hero {
+            padding: 80px 20px;
+            background: url('images/club_main.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
 
-.pricing-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
+        .hero h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0;
+            letter-spacing: 3px;
+        }
 
-.pricing-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    width: 240px;
-    text-align: center;
-    transition: 0.3s;
-    font-family: 'Lora', serif;
-}
+        .hero p {
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
 
-.pricing-item h3 {
-    color: #ffad00;
-    font-size: 28px;
-    font-weight: 700;
-}
+        /* Pricing section */
+        #pricing {
+            background-color: #3d1c61;
+            padding: 50px 20px;
+        }
 
-.pricing-item p {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 500;
-}
+        #pricing h2 {
+            font-size: 36px;
+            color: #ffad06;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
 
-.pricing-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-}
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
 
-.image-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
+        .pricing-card {
+            background-color: #2e1a47;
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-.image-grid img {
-    width: 30%;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-}
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
-footer {
-    background: linear-gradient(to right, #ff6a00, #ffad00);
-    padding: 20px;
-    margin-top: 50px;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 1px;
-    color: white;
-    font-family: 'Playfair Display', serif;
-}
+        .pricing-card p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Gallery section */
+        #gallery {
+            padding: 50px 20px;
+        }
+
+        #gallery h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffad06;
+            text-transform: uppercase;
+        }
+
+        .image-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .image-grid img {
+            width: 30%;
+            border-radius: 10px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #9b4d96, #6a1b9a);
+            padding: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Club 77</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://discord.gg/gmJuA5ZPuk" target="_blank">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h2>The Ultimate Nightlife Experience</h2>
+        <p>Step into the world of luxury, music, and unforgettable moments.</p>
+    </section>
+    
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Standard Entry</h3>
+                <p>$500</p>
+            </div>
+            <div class="pricing-card">
+                <h3>VIP Entry</h3>
+                <p>$5,000</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Private Booth</h3>
+                <p>$10,000</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium Service</h3>
+                <p>$50,000</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="image-grid">
+            <img src="https://github.com/Nevimas/club77/blob/main/club_interior.jpg?raw=true" alt="Club interior">
+            <img src="https://github.com/Nevimas/club77/blob/main/dj_performance.jpg?raw=true" alt="DJ Booth">
+            <img src="https://github.com/Nevimas/club77/blob/main/club_crowd.jpg?raw=true" alt="Club Bar">
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Club 77. All rights reserved.</p>
+    </footer>
+</body>
+</html>
