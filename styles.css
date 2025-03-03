@@ -1,21 +1,23 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lora', serif;
     background-color: #121212;
     color: white;
     margin: 0;
     padding: 0;
     text-align: center;
+    line-height: 1.6;
 }
 
 header {
     background: linear-gradient(to right, #ff6a00, #ffad00);
-    padding: 40px 20px;
+    padding: 60px 20px;
     color: white;
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 42px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 4px;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    font-family: 'Playfair Display', serif;
 }
 
 nav ul {
@@ -32,9 +34,10 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 18px;
     transition: 0.3s;
+    letter-spacing: 1px;
 }
 
 nav ul li a:hover {
@@ -42,7 +45,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: url('https://github.com/Nevimas/club77/blob/main/club_main.jpg?raw=true') no-repeat center center/cover;
     height: 500px;
     display: flex;
@@ -52,16 +55,18 @@ nav ul li a:hover {
     color: white;
     font-size: 40px;
     font-weight: bold;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+    font-family: 'Playfair Display', serif;
 }
 
 h2 {
     font-size: 36px;
-    font-weight: bold;
+    font-weight: 700;
     color: #ff6a00;
     text-transform: uppercase;
     margin-top: 50px;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
 }
 
 .pricing-container {
@@ -74,28 +79,30 @@ h2 {
 
 .pricing-item {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    width: 220px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    width: 240px;
     text-align: center;
     transition: 0.3s;
+    font-family: 'Lora', serif;
 }
 
 .pricing-item h3 {
     color: #ffad00;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .pricing-item p {
     color: #fff;
     font-size: 22px;
+    font-weight: 500;
 }
 
 .pricing-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 .image-grid {
@@ -109,13 +116,16 @@ h2 {
 .image-grid img {
     width: 30%;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
 }
 
 footer {
     background: linear-gradient(to right, #ff6a00, #ffad00);
     padding: 20px;
     margin-top: 50px;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
     color: white;
+    font-family: 'Playfair Display', serif;
 }
