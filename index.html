@@ -158,14 +158,15 @@
             overflow: auto;
             background-color: rgba(0,0,0,0.4);
             padding-top: 60px;
+            text-align: left;
         }
 
         .modal-content {
             background-color: #2e1a47;
-            margin: 5% auto;
+            margin: 10% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 50%;
             border-radius: 10px;
             color: white;
         }
@@ -182,6 +183,16 @@
             color: #0096c7;
             text-decoration: none;
             cursor: pointer;
+        }
+
+        .modal-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .modal-content ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         /* Gallery section */
@@ -288,9 +299,9 @@
     
     <section id="history">
         <h2>History</h2>
-        <p>Klub 77 byl založen v roce 2003 jako exkluzivní místo pro setkávání lidí z celého světa, kteří hledali nejen zábavu, ale i luxusní zážitky. V průběhu let prošel několika modernizacemi, rozšířením nabídky a zajištění špičkových služeb. V roce 2010 prošel velkou rekonstrukcí, která ho přetvořila na jeden z nejlepších nočních klubů v oblasti. Od svého vzniku si Klub 77 drží pověst místa, kde se rodí nezapomenutelné okamžiky, s vrcholnými DJ sety, hvězdnými hosty a atmosférou, která nikdy nezklame.</p>
+        <p>Klub 77 byl založen v roce 2003 jako exkluzivní místo pro setkávání lidí z celého světa, kteří hledali nejen zábavu, ale i luxusní zážitky. V roce 2010 prošel velkou rekonstrukcí, která ho přetvořila na jeden z nejlepších nočních klubů v oblasti. Od svého vzniku si Klub 77 drží pověst místa, kde se rodí nezapomenutelné okamžiky, s vrcholnými DJ sety, hvězdnými hosty a atmosférou, která nikdy nezklame.</p>
     </section>
-
+    
     <section id="pricing">
         <h2>Pricing</h2>
         <div class="pricing-container">
@@ -302,6 +313,19 @@
                 <h3>Standard</h3>
                 <p>$100</p>
             </div>
+            <div class="pricing-card" onclick="showModal('Special')">
+                <h3>Special</h3>
+                <p>$250</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="image-grid">
+            <img src="images/gallery1.jpg" alt="Gallery Image 1">
+            <img src="images/gallery2.jpg" alt="Gallery Image 2">
+            <img src="images/gallery3.jpg" alt="Gallery Image 3">
         </div>
     </section>
 
@@ -331,33 +355,40 @@
     <footer>
         <p>&copy; 2025 Club 77. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showModal(type) {
+            document.getElementById("myModal").style.display = "block";
+            let title = document.getElementById("modalTitle");
+            let content = document.getElementById("modalContent");
+            if(type === 'VIP') {
+                title.textContent = "VIP";
+                content.innerHTML = `
+                    <li>Exclusive VIP access to all areas</li>
+                    <li>Free drinks and cocktails</li>
+                    <li>Private table service</li>
+                    <li>Meet and greet with top DJs</li>
+                `;
+            } else if(type === 'Standard') {
+                title.textContent = "Standard";
+                content.innerHTML = `
+                    <li>Access to main floor</li>
+                    <li>Standard drink options</li>
+                    <li>Regular seating</li>
+                `;
+            } else {
+                title.textContent = "Special";
+                content.innerHTML = `
+                    <li>Priority access</li>
+                    <li>Free drinks</li>
+                    <li>Meet with select DJs</li>
+                `;
+            }
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
-
-<script>
-    function showModal(type) {
-        document.getElementById("myModal").style.display = "block";
-        let title = document.getElementById("modalTitle");
-        let content = document.getElementById("modalContent");
-        if(type === 'VIP') {
-            title.textContent = "VIP";
-            content.innerHTML = `
-                <li>Exclusive VIP access to all areas</li>
-                <li>Free drinks and cocktails</li>
-                <li>Private table service</li>
-                <li>Meet and greet with top DJs</li>
-            `;
-        } else {
-            title.textContent = "Standard";
-            content.innerHTML = `
-                <li>Access to main floor</li>
-                <li>Standard drink options</li>
-                <li>Regular seating</li>
-            `;
-        }
-    }
-
-    function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-    }
-</script>
