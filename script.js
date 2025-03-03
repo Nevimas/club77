@@ -20,11 +20,6 @@ function openModal(title, price, description) {
     document.getElementById('myModal').style.display = 'block';
 }
 
-// Funkce pro zavření modálního okna
-function closeModal() {
-    document.getElementById('myModal').style.display = 'none';
-}
-
 // Funkce pro zobrazení modálního okna pro ceník
 function showModal(type) {
     document.getElementById("myModal").style.display = "block";
@@ -59,4 +54,11 @@ function showModal(type) {
 // Funkce pro zavření modálního okna
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
+}
+
+// Funkce pro zavření modálního okna při kliknutí mimo obsah okna
+window.onclick = function(event) {
+    if (event.target === document.getElementById("myModal")) {
+        document.getElementById("myModal").style.display = "none";
+    }
 }
