@@ -318,7 +318,7 @@
                 <p>$10,000</p>
             </div>
         </div>
-        
+
         <!-- New VIP Entry -->
         <div class="pricing-item" onclick="openModal('VIP Entry', '$2,500', ['Includes priority entry', 'VIP area access', 'Exclusive bottle service'])">
             <h3>VIP Entry</h3>
@@ -362,8 +362,8 @@
     <script>
         function showModal(type) {
             document.getElementById("myModal").style.display = "block";
-            let title = document.getElementById("modalTitle");
-            let content = document.getElementById("modalContent");
+            let title = document.getElementById("modal-title");
+            let content = document.getElementById("modal-description");
             if(type === 'VIP') {
                 title.textContent = "VIP";
                 content.innerHTML = `
